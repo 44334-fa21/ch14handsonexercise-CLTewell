@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>LASTNAME Chapter14HandsOnExercise</title>
+		<title>Tewell Chapter14HandsOnExercise</title>
 		<meta charset="utf-8">
 		<!-- jQuery 1.8 or later, 33 KB -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -10,7 +10,7 @@
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 		<style>
-		nput { display: block;
+		input { display: block;
         margin-bottom: 1em;
         }
 label { float: left;
@@ -23,7 +23,7 @@ label { float: left;
 		</style>
 	</head>
 <body>
-<h1>JavaScript Form Handling</h1>
+<h1>JavaScript</h1>
 <form method="post"
       action="http://webdevbasics.net/scripts/demo.php"
       onsubmit="return validateForm();">
@@ -31,21 +31,26 @@ label { float: left;
 <input type="text" name="userName" id="userName">
 <label for="userAge">Age:</label>
 <input type="text" name="userAge" id="userAge">
+<label for="City">City:</label>
+<input type="text" name="userCity" id="userCity">
 <input type="submit" value="Send information" id="submit">
 </form>
-
-
+<div class="fotorama" data-autoplay="true">
+  <img src="Harper.jpg" data-caption="Harper" alt="Harper">
+  <img src="Matilda.jpg" data-caption="Matilda" alt="Matilda">
+  <img src="ArtProjectFlagRasing.jpg" data-caption="ArtProjectFlagRasing" alt="ArtProjectFlagRasing">
+</div>
 <script>
 function validateForm(){
-  if(document.forms[0].userName.value == ""){
-    alert("Name field cannot be empty");
+  if(document.forms[0].userCity.value == ""){
+    alert("City field cannot be empty");
     return false;
   }
   if (document.forms[0].userAge.value < 18){
     alert("Age is less than 18. You do not have access")
     return false;
   }
-  alert("Name and age are valid");
+  alert("City and age are valid");
   return true;
 }
 </script>
